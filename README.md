@@ -1,7 +1,7 @@
 # node01
 
 
-# Получаем и выводим весь список контакстов в виде таблицы (console.table)
+# Получаем и выводим весь список контакстов
 node index.js --action="list"
 ![alt text](https://github.com/BURZUMANE/node01/blob/master/screenShots/Screen%20Shot%202020-06-21%20at%201.21.18%20PM.png?raw=true)
 
