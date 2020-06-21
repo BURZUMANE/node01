@@ -52,9 +52,9 @@ module.exports = class PhoneBook {
       {},
       err => {
         if (err) throw err;
-        console.log("file created...");
       },
-    );
+      );
+      console.log("file deleted...");
   };
   addContact = async (name, email, phone) => {
     const id = shortid.generate();
@@ -67,23 +67,8 @@ module.exports = class PhoneBook {
       {},
       err => {
         if (err) throw err;
-        console.log("file created...");
       },
     );
+    console.log("file created...");
   };
 };
-// Path to the contacts.json on the file sytem
-// const contactsPath = path.join(__dirname, "/db", "contacts.json");
-
-// module.exports = {
-//   // Extraction of the file with in uttf8
-//   listContacts: () => {
-//     fs.readFile(contactsPath, "utf8", (err, data) => {
-//       if (err) throw err;
-//       console.log(data);
-//     });
-//   },
-//   getContactById(contactId) {
-//     // ...твой код
-//   },
-// };
