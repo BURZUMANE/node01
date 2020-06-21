@@ -5,7 +5,7 @@
 node index.js --action="list"
 
 
-![alt text](https://github.com/BURZUMANE/node01/blob/master/screenShots/Screen%20Shot%202020-06-21%20at%201.21.18%20PM.png?raw=true)
+![alt text](https://github.com/BURZUMANE/node01/blob/master/screenShots/Screen%20Shot%202020-06-21%20at%201.31.35%20PM.png?raw=true)
 
 # Получаем контакт по id
 node index.js --action="get" --id=5
