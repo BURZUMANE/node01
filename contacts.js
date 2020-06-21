@@ -15,20 +15,8 @@ module.exports = class PhoneBook {
   };
   showContacts = async () => {
     console.log("Contacts");
-    console.log("----------------");
     const contacts = await this.listContacts();
-    contacts.forEach(item => {
-      console.log("-----------------------------");
-      console.log("name:");
-      console.log(`${item.name}`);
-      console.log("number:");
-      console.log(`${item.phone}`);
-      console.log("email:");
-      console.log(`${item.email}`);
-      console.log("id:");
-      console.log(`${item.id}`);
-      console.log("----------------------------");
-    });
+    console.table(contacts)
   };
   getContactById = async contactId => {
     const contacts = await this.listContacts();

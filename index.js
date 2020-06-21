@@ -3,7 +3,7 @@ const argv = require("yargs").argv;
 const myBook = new Phonebook();
 
 // TODO: рефакторить
-function invokeAction({ action, id, name, email, phone }) {
+function invokeAction({ action, name, email, phone }) {
   switch (action) {
     case "list":
       myBook.showContacts();
@@ -24,17 +24,3 @@ function invokeAction({ action, id, name, email, phone }) {
 }
 
 invokeAction(argv);
-
-// switch (argv.action) {
-//   case "list":
-//     myBook.showContacts();
-//     break;
-//   case "get":
-//     myBook.getContactById(argv.id);
-//     break;
-//   case "remove":
-//     myBook.removeContact(argv.id);
-//     break;
-//   default:
-//     console.log("Sorry....");
-// }
