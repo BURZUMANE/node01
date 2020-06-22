@@ -16,7 +16,7 @@ module.exports = class PhoneBook {
   showContacts = async () => {
     console.log("Contacts");
     const contacts = await this.listContacts();
-    console.table(contacts)
+    console.table(contacts);
   };
   getContactById = async contactId => {
     const contacts = await this.listContacts();
@@ -36,13 +36,13 @@ module.exports = class PhoneBook {
     const filteredContacts = contacts.filter(item => item.id !== contactId);
     await fs.writeFile(
       path.join(__dirname, "/db", "contacts.json"),
-      JSON.stringify(filteredContacts),
+      JSON.stringify(filteredContacts, null, 2),
       {},
       err => {
         if (err) throw err;
       },
-      );
-      console.log("file deleted...");
+    );
+    console.log("file deleted...");
   };
   addContact = async (name, email, phone) => {
     const id = shortid.generate();
@@ -51,7 +51,7 @@ module.exports = class PhoneBook {
     contacts.push(contact);
     await fs.writeFile(
       path.join(__dirname, "/db", "contacts.json"),
-      JSON.stringify(contacts),
+      JSON.stringify(contacts, null, 2),
       {},
       err => {
         if (err) throw err;
